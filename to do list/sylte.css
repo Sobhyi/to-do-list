@@ -1,0 +1,368 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('./photos/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+.blurred {
+    filter: blur(5px);
+    pointer-events: none;
+}
+
+.navbar {
+    background-color: rgba(51, 51, 51, 0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    backdrop-filter: blur(10px);
+    margin-bottom: 60px;
+}
+
+.navbar .logo a {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background-color: #575757;
+    color: #007bff;
+    border-radius: 4px;
+}
+
+body h1 {
+    color: white;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+body .add-task {
+    width: 800px;
+    height: 300px;
+    position: fixed;
+    left: 24%;
+    border: solid white 2px;
+    position: relative;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+body .add-task h3 {
+    margin-top: 20px;
+    color: white;
+}
+
+body .add-task h3 + input {
+    display: block;
+    width: 600px;
+    padding: 12px;
+    margin: 10px auto;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    
+}
+
+.buttonA {
+    width: 20%;
+    height: 14%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: rgba(40, 167, 69, 0.6); 
+    color: white;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.buttonC {
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: rgba(220, 53, 69, 0.6); 
+    color: white;
+    width: 20%;
+    height: 14%;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.buttonA:hover {
+    background-color: rgba(40, 167, 69, 1); 
+    box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3);
+}
+
+.buttonC:hover {
+    background-color: rgba(220, 53, 69, 1); 
+    box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3); 
+}
+
+.add-task .screen1,
+.add-task .screen2 {
+    width: 160px;
+    height: 45px;
+    position: absolute;
+    left: 10px;
+    padding-left: 12px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    justify-content: flex-start;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.add-task .screen1 {
+    background-color: rgba(44, 62, 80, 0.7);
+    bottom: 60px;
+}
+
+.add-task .screen2 {
+    background-color: rgba(41, 128, 185, 0.7);
+    bottom: 10px;
+}
+
+.add-task .screen1 p,
+.add-task .screen2 p {
+    margin: 0;
+    font-size: 16px;
+    text-align: left;
+    padding-left: -2px;
+}
+
+h2 {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.heading-result{
+    color: white;
+}
+
+.result-box {
+    width: 600px;
+    height: auto;
+    margin-left: 30%;
+    border: solid white 2px;
+    margin-bottom: 60px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.res {
+    position: relative;
+    width: 80%;
+    height: auto;
+    padding: 15px;
+    margin: 20px auto;
+    border: 3px solid #ff0000;
+    font-size: 20px;
+    background-color: #ffccd5;
+    color: white;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.res i {
+    position: absolute;
+    left: 92%;
+    top: 50%;
+    color: white;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.res2 {
+    position: relative;
+    width: 80%;
+    height: auto;
+    padding: 15px;
+    margin: 20px auto;
+    border: 3px solid #eee;
+    color: white;
+    font-size: 20px;
+    background-color: rgba(246, 192, 192, 0.8);
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.res2:hover {
+    background-color: rgba(246, 177, 177, 1);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.res2 .i_trash {
+    position: absolute;
+    left: 94%;
+    top: 50%;
+    cursor: pointer;
+}
+
+.res2 .i_check {
+    position: absolute;
+    right: 94%;
+    top: 35%;
+    cursor: pointer;
+}
+
+.error {
+    width: 600px;
+    padding: 8px;
+    margin: 10px auto;
+    background-color: rgba(255, 204, 213, 0.5);
+    color: #dc3545;
+    border: 2px solid #dc3545;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    opacity: 0.95;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+}
+
+.error p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #dc3545;
+}
+
+.error i {
+    font-size: 28px;
+    color: #dc3545;
+}
+
+.checked {
+    position: relative;
+    width: 80%;
+    height: auto;
+    padding: 15px;
+    margin: 20px auto;
+    text-decoration: line-through;
+    background-color: rgb(0, 205, 0);
+    border: solid 2px white;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-weight: 600;
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    opacity: 0.6;
+}
+
+.checked .i_trash {
+    position: absolute;
+    left: 94%;
+    top: 50%;
+    cursor: pointer;
+}
+
+.checked .i_check {
+    position: absolute;
+    right: 94%;
+    top: 35%;
+    cursor: pointer;
+}
+
+.checked:hover {
+    background-color: rgb(0, 180, 0);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.sure {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    width: 300px;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(10px);
+    z-index: 2000;
+    display: none;
+}
+
+.sure p {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.sure button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-yes {
+    background-color: rgba(40, 167, 69, 0.9);
+    color: white;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-no {
+    background-color: rgba(220, 53, 69, 0.9);
+    color: white;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-yes:hover {
+    background-color: rgba(40, 167, 69, 1);
+    box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3);
+}
+
+.btn-no:hover {
+    background-color: rgba(220, 53, 69, 1);
+    box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+}
