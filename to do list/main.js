@@ -27,6 +27,7 @@ let check_is_empty =()=>{
 
 //add function
 let addF = () => {
+     check_is_empty();
 
 let inputValue = dataInput.value.trim();
 
@@ -79,12 +80,14 @@ sure_yes.addEventListener('click',function(){
             tasks[i]="";
          }
          counter_update();
+         check_is_empty();
         
 })
 
 sure_no.addEventListener('click',function(){
 
     sure.style.display="none";
+     check_is_empty();
     
 })
 
@@ -123,6 +126,7 @@ if(res2Element){
         check_icon.style.color = "#ffffff";
     } 
 counter_update();
+ check_is_empty();
 }
 })
 
@@ -134,7 +138,7 @@ let unchecked_no = resultBox.querySelectorAll('.res2:not(.checked)').length;
 
 screen1.innerHTML=`<p>finished tasks: ${checked_no}</p>`;
 screen2.innerHTML=`<p>pending tasks: ${unchecked_no}</p>`;
-
+ check_is_empty();
 }
 
 
@@ -142,3 +146,4 @@ screen2.innerHTML=`<p>pending tasks: ${unchecked_no}</p>`;
 //Events
 add.addEventListener('click',addF);
 clear.addEventListener('click',delete_all)
+
